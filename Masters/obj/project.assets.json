@@ -12072,23 +12072,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\S531384\\.nuget\\packages\\": {},
+    "C:\\Users\\S531494\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\S531384\\Documents\\Masters\\Masters\\Masters\\Masters.csproj",
+      "projectUniqueName": "C:\\Users\\S531494\\Documents\\44663\\Project\\Masters\\Masters\\Masters.csproj",
       "projectName": "Masters",
-      "projectPath": "C:\\Users\\S531384\\Documents\\Masters\\Masters\\Masters\\Masters.csproj",
-      "packagesPath": "C:\\Users\\S531384\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\S531384\\Documents\\Masters\\Masters\\Masters\\obj\\",
+      "projectPath": "C:\\Users\\S531494\\Documents\\44663\\Project\\Masters\\Masters\\Masters.csproj",
+      "packagesPath": "C:\\Users\\S531494\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\S531494\\Documents\\44663\\Project\\Masters\\Masters\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\S531384\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\S531494\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
