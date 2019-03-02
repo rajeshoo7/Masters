@@ -7,5 +7,13 @@ namespace Masters.Models
 {
     public class DegreePlan
     {
+        public int DegreePlanID { get; set; }
+        public int DegreeID { get; set; }
+        public String StudentID { get; set; }
+        public String DegreePlanAbbrev { get; set; }
+        public String DegreePlanName { get; set; }
+       
+
+
     }
 }

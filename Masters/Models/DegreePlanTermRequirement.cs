@@ -8,6 +8,10 @@ namespace Masters.Models
     public class DegreePlanTermRequirement
     {
 
+        public int DegreePlanTermRequirementID { get; set; }
+        public int DegreePlanID { get; set; }
+        public int TermID { get; set; }
+        public int RequirementID { get; set; }
 
     }
 }
