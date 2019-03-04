@@ -30,3 +30,11 @@ C:\Users\S531384\Documents\Masters\Masters\Masters\obj\Debug\netcoreapp2.2\Maste
 C:\Users\S531384\Documents\Masters\Masters\Masters\obj\Debug\netcoreapp2.2\Masters.dll
 C:\Users\S531384\Documents\Masters\Masters\Masters\obj\Debug\netcoreapp2.2\Masters.pdb
 C:\Users\S531384\Documents\Masters\Masters\Masters\obj\Debug\netcoreapp2.2\Masters.csproj.CopyComplete
+C:\Users\S531384\Documents\Masters\Masters\obj\Debug\netcoreapp2.2\Masters.csprojAssemblyReference.cache
+C:\Users\S531384\Documents\Masters\Masters\obj\Debug\netcoreapp2.2\Masters.csproj.CoreCompileInputs.cache
+C:\Users\S531384\Documents\Masters\Masters\obj\Debug\netcoreapp2.2\Masters.RazorAssemblyInfo.cache
+C:\Users\S531384\Documents\Masters\Masters\obj\Debug\netcoreapp2.2\Masters.RazorAssemblyInfo.cs
+C:\Users\S531384\Documents\Masters\Masters\obj\Debug\netcoreapp2.2\Masters.AssemblyInfoInputs.cache
+C:\Users\S531384\Documents\Masters\Masters\obj\Debug\netcoreapp2.2\Masters.AssemblyInfo.cs
+C:\Users\S531384\Documents\Masters\Masters\obj\Debug\netcoreapp2.2\Masters.dll
+C:\Users\S531384\Documents\Masters\Masters\obj\Debug\netcoreapp2.2\Masters.pdb

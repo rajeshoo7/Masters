@@ -70,6 +70,7 @@ new Models.Requirement {RequirementID=692,RequirementAbbrev="GDP2",RequirementNa
                 context.SaveChanges();
 
             }
+
             if (context.DegreeRequirements.Any())
             {
                 Console.WriteLine(" DegreeRequirement already exist");
@@ -125,7 +126,7 @@ new Models.DegreeRequirement {DegreeRequirementID=44,DegreeID=4,RequirementID=66
 new Models.DegreeRequirement {DegreeRequirementID=45,DegreeID=4,RequirementID=10},
 new Models.DegreeRequirement {DegreeRequirementID=46,DegreeID=4,RequirementID=20},
 new Models.DegreeRequirement {DegreeRequirementID=47,DegreeID=4,RequirementID=691},
-new Models.DegreeRequirement {DegreeRequirementID=48,DegreeID=4,RequirementID=692
+new Models.DegreeRequirement {DegreeRequirementID=48,DegreeID=4,RequirementID=692},
 
 
                 };
@@ -148,7 +149,7 @@ new Models.DegreeRequirement {DegreeRequirementID=48,DegreeID=4,RequirementID=69
                 var degreePlanTermRequirements = new Models.DegreePlanTermRequirement[]
                 {
                     new Models.DegreePlanTermRequirement {DegreePlanTermRequirementID=1,DegreePlanID=20,TermID=1,RequirementID=460},
-                    new Models.DegreePlanTermRequirement {DegreePlanTermRequirementID=2,DegreePlanID=20,TermID=1,RequirementID=356}
+                    new Models.DegreePlanTermRequirement {DegreePlanTermRequirementID=2,DegreePlanID=20,TermID=1,RequirementID=356},
                     new Models.DegreePlanTermRequirement {DegreePlanTermRequirementID=3,DegreePlanID=20,TermID=1,RequirementID=542},
 new Models.DegreePlanTermRequirement {DegreePlanTermRequirementID=4,DegreePlanID=20,TermID=1,RequirementID=563},
 new Models.DegreePlanTermRequirement {DegreePlanTermRequirementID=5,DegreePlanID=20,TermID=2,RequirementID=560},
@@ -298,7 +299,17 @@ new Models.DegreePlanTermRequirement {DegreePlanTermRequirementID=130,DegreePlan
             {
                 var DegreePlans = new Models.DegreePlan[]
                 {
-        
+        new Models.DegreePlan{DegreePlanID=12,DegreeID=1,StudentID="S531494",DegreePlanAbbrev="NSO",DegreePlanName="No summer off"},
+new Models.DegreePlan{DegreePlanID=13,DegreeID=1,StudentID="S531494",DegreePlanAbbrev="SO",DegreePlanName="summer off"},
+new Models.DegreePlan{DegreePlanID=14,DegreeID=1,StudentID="s531507",DegreePlanAbbrev="SO",DegreePlanName="summer off"},
+new Models.DegreePlan{DegreePlanID=15,DegreeID=1,StudentID="s531507",DegreePlanAbbrev="NSO",DegreePlanName="No summer off"},
+new Models.DegreePlan{DegreePlanID=16,DegreeID=1,StudentID="s533707",DegreePlanAbbrev="SO",DegreePlanName="summer off"},
+new Models.DegreePlan{DegreePlanID=17,DegreeID=1,StudentID="s533707",DegreePlanAbbrev="NSO",DegreePlanName="No summer off"},
+new Models.DegreePlan{DegreePlanID=18,DegreeID=1,StudentID="s531384",DegreePlanAbbrev="NSO",DegreePlanName="No summer off"},
+new Models.DegreePlan{DegreePlanID=19,DegreeID=1,StudentID="s531384",DegreePlanAbbrev="SO",DegreePlanName="summer off"},
+new Models.DegreePlan{DegreePlanID=20,DegreeID=1,StudentID="S531503",DegreePlanAbbrev="NSO",DegreePlanName="No summer off"},
+new Models.DegreePlan{DegreePlanID=21,DegreeID=1,StudentID="s531503",DegreePlanAbbrev="SO",DegreePlanName="summer off"},
+
                 };
                 Console.WriteLine($"Inserted {DegreePlans.Length} new DegreePlans");
 
@@ -309,10 +320,6 @@ new Models.DegreePlanTermRequirement {DegreePlanTermRequirementID=130,DegreePlan
                 context.SaveChanges();
 
             }
-
-
-
-
 
 
             if (context.Students.Any())
@@ -335,6 +342,52 @@ new Models.Student{StudentID=531507,FirstName="Vijay",LastName="Thupakala",Snumb
                 foreach (Models.Student d in Students)
                 {
                     context.Students.Add(d);
+                }
+                context.SaveChanges();
+
+            }
+
+             if (context.StudentTerms.Any())
+            {
+                Console.WriteLine(" StudentTerms already exist");
+            }
+            else
+            {
+                var StudentTerms = new Models.StudentTerm[]
+                {
+           new Models.StudentTerm{StudentTermID=1,StudentID=531494,TermID=1,TermAbbrev="S18",TermLabel="Spring 2018"},
+new Models.StudentTerm{StudentTermID=2,StudentID=531494,TermID=2,TermAbbrev="Su18",TermLabel="Summer 2018"},
+new Models.StudentTerm{StudentTermID=3,StudentID=531494,TermID=3,TermAbbrev="F18",TermLabel="Fall 2018"},
+new Models.StudentTerm{StudentTermID=4,StudentID=531494,TermID=4,TermAbbrev="S19",TermLabel="Spring 2019"},
+new Models.StudentTerm{StudentTermID=5,StudentID=531494,TermID=5,TermAbbrev="Su19",TermLabel="Summer2019"},
+new Models.StudentTerm{StudentTermID=6,StudentID=531503,TermID=1,TermAbbrev="F17",TermLabel="Fall 2017"},
+new Models.StudentTerm{StudentTermID=7,StudentID=531503,TermID=2,TermAbbrev="S18",TermLabel="Spring 2018"},
+new Models.StudentTerm{StudentTermID=8,StudentID=531503,TermID=3,TermAbbrev="Su18",TermLabel="Summer 2018"},
+new Models.StudentTerm{StudentTermID=9,StudentID=531503,TermID=4,TermAbbrev="F18",TermLabel="Fall 2018"},
+new Models.StudentTerm{StudentTermID=10,StudentID=531503,TermID=5,TermAbbrev="S19",TermLabel="Spring 2019"},
+new Models.StudentTerm{StudentTermID=11,StudentID=531384,TermID=1,TermAbbrev="S18",TermLabel="Fall 2019"},
+new Models.StudentTerm{StudentTermID=12,StudentID=531384,TermID=2,TermAbbrev="Su18",TermLabel="Spring 2020"},
+new Models.StudentTerm{StudentTermID=13,StudentID=531384,TermID=3,TermAbbrev="F18",TermLabel="Summer 2020"},
+new Models.StudentTerm{StudentTermID=14,StudentID=531384,TermID=4,TermAbbrev="S19",TermLabel="Fall 2020"},
+new Models.StudentTerm{StudentTermID=15,StudentID=531384,TermID=5,TermAbbrev="Su19",TermLabel="Spring 2021"},
+new Models.StudentTerm{StudentTermID=16,StudentID=533707,TermID=1,TermAbbrev="F18",TermLabel="Fall 2018"},
+new Models.StudentTerm{StudentTermID=17,StudentID=533707,TermID=2,TermAbbrev="S19",TermLabel="spring 2019"},
+new Models.StudentTerm{StudentTermID=18,StudentID=533707,TermID=3,TermAbbrev="Su19",TermLabel="summer 2019"},
+new Models.StudentTerm{StudentTermID=19,StudentID=533707,TermID=4,TermAbbrev="F19",TermLabel="Fall 2019"},
+new Models.StudentTerm{StudentTermID=20,StudentID=533707,TermID=5,TermAbbrev="S20",TermLabel="Spring 2020"},
+new Models.StudentTerm{StudentTermID=21,StudentID=531507,TermID=1,TermAbbrev="S19",TermLabel="Spring 2019"},
+new Models.StudentTerm{StudentTermID=22,StudentID=531507,TermID=2,TermAbbrev="Su19",TermLabel="Summer 2019"},
+new Models.StudentTerm{StudentTermID=23,StudentID=531507,TermID=3,TermAbbrev="F19",TermLabel="Fall 2019"},
+new Models.StudentTerm{StudentTermID=24,StudentID=531507,TermID=4,TermAbbrev="S20",TermLabel="Spring 2020"},
+new Models.StudentTerm{StudentTermID=25,StudentID=531507,TermID=5,TermAbbrev="Su20",TermLabel="Summer 2020"},
+
+
+                };
+                Console.WriteLine($"Inserted {StudentTerms.Length} new StudentTerms");
+
+                foreach (Models.StudentTerm d in StudentTerms)
+                {
+                    context.StudentTerms.Add(d);
                 }
                 context.SaveChanges();
 
