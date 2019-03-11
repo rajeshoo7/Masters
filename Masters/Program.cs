@@ -16,7 +16,7 @@ namespace Masters
     {
         public static void Main(string[] args)
         {
-            var host = BuildWebHost(args).Build();
+            var host = BuildWebHost(args);
 
             using (var scope = host.Services.CreateScope())
             {
@@ -40,9 +40,10 @@ namespace Masters
 
         }
 
-        public static IWebHostBuilder BuildWebHost(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>();
-                 
+        public static IWebHost BuildWebHost(string[] args) =>
+             WebHost.CreateDefaultBuilder(args)
+                 .UseStartup<Startup>()
+                 .Build();
+
     }
 }
