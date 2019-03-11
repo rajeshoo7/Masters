@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -7,7 +8,7 @@ namespace Masters.Models
 {
     public class StudentTerm
     {
-
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int StudentID { get; set; }
         public int StudentTermID { get; set; }
         public int TermID { get; set; }
