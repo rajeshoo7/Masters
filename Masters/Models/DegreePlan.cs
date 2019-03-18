@@ -21,6 +21,7 @@ namespace Masters.Models
         public String DegreePlanName { get; set; }
 
         public Degree Degree { get; set; }
+        public Student Student { get; set; }
        
        
 

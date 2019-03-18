@@ -44,9 +44,13 @@ namespace Masters.Migrations
 
                     b.Property<string>("StudentId");
 
+                    b.Property<int?>("StudentId1");
+
                     b.HasKey("DegreePlanId");
 
                     b.HasIndex("DegreeId");
+
+                    b.HasIndex("StudentId1");
 
                     b.ToTable("DegreePlan");
                 });
@@ -307,6 +311,10 @@ namespace Masters.Migrations
                         .WithMany()
                         .HasForeignKey("DegreeId")
                         .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Masters.Models.Student", "Student")
+                        .WithMany()
+                        .HasForeignKey("StudentId1");
                 });
 
             modelBuilder.Entity("Masters.Models.DegreePlanTermRequirement", b =>

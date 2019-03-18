@@ -9,20 +9,29 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
+<form asp-action="Index" method="get">
+    <div class="form-actions no-color">
+        <p>
+            Find by degree name: <input type="text" name="SearchString" value="@ViewData["currentFilter"]" />
+            <input type="submit" value="Search" class="btn btn-default" /> |
+            <a asp-action="Index">Back to Full List</a>
+        </p>
+    </div>
+</form>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.StudentId)
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["DegreePlanAbrrevSortParm"]">@Html.DisplayNameFor(model => model.DegreePlanAbbrev)</a>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DegreePlanAbbrev)
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["DegreePlanNameSortParm"]">@Html.DisplayNameFor(model => model.DegreePlanName)</a>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DegreePlanName)
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["DegreeSortParm"]">@Html.DisplayNameFor(model => model.Degree)</a>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Degree)
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["StudentSortParm"]">@Html.DisplayNameFor(model => model.Student)</a>
             </th>
             <th></th>
         </tr>
