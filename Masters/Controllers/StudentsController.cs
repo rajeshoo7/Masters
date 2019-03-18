@@ -34,7 +34,7 @@ namespace Masters.Controllers
             }
 
             var student = await _context.Students
-                .FirstOrDefaultAsync(m => m.StudentID == id);
+                .FirstOrDefaultAsync(m => m.StudentId == id);
             if (student == null)
             {
                 return NotFound();
@@ -54,7 +54,7 @@ namespace Masters.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("StudentID,NineOneNineNumber,FirstName,LastName,Snumber")] Student student)
+        public async Task<IActionResult> Create([Bind("StudentId,NineOneNineNumber,FirstName,LastName,Snumber")] Student student)
         {
             if (ModelState.IsValid)
             {
@@ -86,9 +86,9 @@ namespace Masters.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("StudentID,NineOneNineNumber,FirstName,LastName,Snumber")] Student student)
+        public async Task<IActionResult> Edit(int id, [Bind("StudentId,NineOneNineNumber,FirstName,LastName,Snumber")] Student student)
         {
-            if (id != student.StudentID)
+            if (id != student.StudentId)
             {
                 return NotFound();
             }
@@ -102,7 +102,7 @@ namespace Masters.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!StudentExists(student.StudentID))
+                    if (!StudentExists(student.StudentId))
                     {
                         return NotFound();
                     }
@@ -125,7 +125,7 @@ namespace Masters.Controllers
             }
 
             var student = await _context.Students
-                .FirstOrDefaultAsync(m => m.StudentID == id);
+                .FirstOrDefaultAsync(m => m.StudentId == id);
             if (student == null)
             {
                 return NotFound();
@@ -147,7 +147,7 @@ namespace Masters.Controllers
 
         private bool StudentExists(int id)
         {
-            return _context.Students.Any(e => e.StudentID == id);
+            return _context.Students.Any(e => e.StudentId == id);
         }
     }
 }

@@ -10,15 +10,18 @@ namespace Masters.Models
     {
 
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int DegreePlanID { get; set; }
+        public int DegreePlanId { get; set; }
 
 
-      //  [ForeignKey("DegreeID")]
+      //  [ForeignKey("DegreeId")]
        
-        public int DegreeID { get; set; }
-        public String StudentID { get; set; }
+        public int DegreeId { get; set; }
+        public String StudentId { get; set; }
         public String DegreePlanAbbrev { get; set; }
         public String DegreePlanName { get; set; }
+
+        public Degree Degree { get; set; }
+       
        
 
 

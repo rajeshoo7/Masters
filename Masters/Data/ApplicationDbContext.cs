@@ -15,10 +15,12 @@ namespace Masters.Data
 
         public DbSet<Models.Degree> Degrees { get; set; }
         public DbSet<Models.Requirement> Requirements { get; set; }
-        public DbSet<Models.DegreeRequirement> DegreeRequirements { get; set; }
-        public DbSet<Models.DegreePlanTermRequirement> DegreePlanTermRequirements { get; set; }
-        public DbSet<Models.DegreePlan> DegreePlans { get; set; }
         public DbSet<Models.Student> Students { get; set; }
+        public DbSet<Models.DegreeRequirement> DegreeRequirements { get; set; }
+        public DbSet<Models.DegreePlan> DegreePlans { get; set; }
+        public DbSet<Models.DegreePlanTermRequirement> DegreePlanTermRequirements { get; set; }
+       
+     
         public DbSet<Models.StudentTerm> StudentTerms { get; set; }
 
 

@@ -9,7 +9,7 @@ namespace Masters.Models
     public class Requirement
     {
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int RequirementID { get; set; }
+        public int RequirementId { get; set; }
         public string RequirementAbbrev { get; set; }
         public string RequirementName { get; set; }
 

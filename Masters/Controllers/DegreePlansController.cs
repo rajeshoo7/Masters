@@ -22,7 +22,8 @@ namespace Masters.Controllers
         // GET: DegreePlans
         public async Task<IActionResult> Index()
         {
-            return View(await _context.DegreePlans.ToListAsync());
+            var applicationDbContext = _context.DegreePlans.Include(d => d.Degree);
+            return View(await applicationDbContext.ToListAsync());
         }
 
         // GET: DegreePlans/Details/5
@@ -34,7 +35,8 @@ namespace Masters.Controllers
             }
 
             var degreePlan = await _context.DegreePlans
-                .FirstOrDefaultAsync(m => m.DegreePlanID == id);
+                .Include(d => d.Degree)
+                .FirstOrDefaultAsync(m => m.DegreePlanId == id);
             if (degreePlan == null)
             {
                 return NotFound();
@@ -46,6 +48,7 @@ namespace Masters.Controllers
         // GET: DegreePlans/Create
         public IActionResult Create()
         {
+            ViewData["DegreeId"] = new SelectList(_context.Degrees, "DegreeId", "DegreeId");
             return View();
         }
 
@@ -54,7 +57,7 @@ namespace Masters.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("DegreePlanID,DegreeID,StudentID,DegreePlanAbbrev,DegreePlanName")] DegreePlan degreePlan)
+        public async Task<IActionResult> Create([Bind("DegreePlanId,DegreeId,StudentId,DegreePlanAbbrev,DegreePlanName")] DegreePlan degreePlan)
         {
             if (ModelState.IsValid)
             {
@@ -62,6 +65,7 @@ namespace Masters.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["DegreeId"] = new SelectList(_context.Degrees, "DegreeId", "DegreeId", degreePlan.DegreeId);
             return View(degreePlan);
         }
 
@@ -78,6 +82,7 @@ namespace Masters.Controllers
             {
                 return NotFound();
             }
+            ViewData["DegreeId"] = new SelectList(_context.Degrees, "DegreeId", "DegreeId", degreePlan.DegreeId);
             return View(degreePlan);
         }
 
@@ -86,9 +91,9 @@ namespace Masters.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("DegreePlanID,DegreeID,StudentID,DegreePlanAbbrev,DegreePlanName")] DegreePlan degreePlan)
+        public async Task<IActionResult> Edit(int id, [Bind("DegreePlanId,DegreeId,StudentId,DegreePlanAbbrev,DegreePlanName")] DegreePlan degreePlan)
         {
-            if (id != degreePlan.DegreePlanID)
+            if (id != degreePlan.DegreePlanId)
             {
                 return NotFound();
             }
@@ -102,7 +107,7 @@ namespace Masters.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!DegreePlanExists(degreePlan.DegreePlanID))
+                    if (!DegreePlanExists(degreePlan.DegreePlanId))
                     {
                         return NotFound();
                     }
@@ -113,6 +118,7 @@ namespace Masters.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["DegreeId"] = new SelectList(_context.Degrees, "DegreeId", "DegreeId", degreePlan.DegreeId);
             return View(degreePlan);
         }
 
@@ -125,7 +131,8 @@ namespace Masters.Controllers
             }
 
             var degreePlan = await _context.DegreePlans
-                .FirstOrDefaultAsync(m => m.DegreePlanID == id);
+                .Include(d => d.Degree)
+                .FirstOrDefaultAsync(m => m.DegreePlanId == id);
             if (degreePlan == null)
             {
                 return NotFound();
@@ -147,7 +154,7 @@ namespace Masters.Controllers
 
         private bool DegreePlanExists(int id)
         {
-            return _context.DegreePlans.Any(e => e.DegreePlanID == id);
+            return _context.DegreePlans.Any(e => e.DegreePlanId == id);
         }
     }
 }

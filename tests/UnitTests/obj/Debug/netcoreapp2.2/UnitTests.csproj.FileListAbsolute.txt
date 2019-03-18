@@ -6,7 +6,6 @@ C:\Users\S531494\Documents\44663\Project\Masters\tests\UnitTests\bin\Debug\netco
 C:\Users\S531494\Documents\44663\Project\Masters\tests\UnitTests\bin\Debug\netcoreapp2.2\UnitTests.runtimeconfig.dev.json
 C:\Users\S531494\Documents\44663\Project\Masters\tests\UnitTests\bin\Debug\netcoreapp2.2\UnitTests.dll
 C:\Users\S531494\Documents\44663\Project\Masters\tests\UnitTests\bin\Debug\netcoreapp2.2\UnitTests.pdb
-C:\Users\S531494\Documents\44663\Project\Masters\tests\UnitTests\obj\Debug\netcoreapp2.2\UnitTests.csprojAssemblyReference.cache
 C:\Users\S531494\Documents\44663\Project\Masters\tests\UnitTests\obj\Debug\netcoreapp2.2\UnitTests.csproj.CoreCompileInputs.cache
 C:\Users\S531494\Documents\44663\Project\Masters\tests\UnitTests\obj\Debug\netcoreapp2.2\UnitTests.AssemblyInfoInputs.cache
 C:\Users\S531494\Documents\44663\Project\Masters\tests\UnitTests\obj\Debug\netcoreapp2.2\UnitTests.AssemblyInfo.cs
