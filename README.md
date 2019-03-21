@@ -9,13 +9,13 @@
 - Vijay Tupakula
 - Srimai Reddy Yanala
 
-# App requirements
+# App requirements:
 
 - Visual Studio
 - ASP.Net Core
 - Git
 
-# Running our Application
+# Running our Application:
 
 - Clone project from our repo: https://github.com/SrimaiReddy/Masters
 - copy link uder clone tab
@@ -27,7 +27,11 @@
 
 
 
-# Issue tracking system
+# Issue tracking system:
+
   https://github.com/SrimaiReddy/Masters/issues
 
+# Screen shots of App running locally:
 
+![Image1](https://github.com/SrimaiReddy/Masters/blob/master/Docs/image1.png)
+![Image2](https://github.com/SrimaiReddy/Masters/blob/master/Docs/image2.png)
