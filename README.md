@@ -38,7 +38,7 @@
 
 # Cost Estimate
 
-| Cost Estimator        |        |
+| Cost Estimate       |        |
 |-----------------------|--------|
 | Take Home Hourly Rate |55/hrs |
 | Multiplier            | 2.7    |
