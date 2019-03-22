@@ -35,3 +35,14 @@
 
 ![Image1](https://github.com/SrimaiReddy/Masters/blob/master/Docs/image1.png)
 ![Image2](https://github.com/SrimaiReddy/Masters/blob/master/Docs/image2.png)
+
+# Cost Estimate
+
+| Cost Estimator        |        |
+|-----------------------|--------|
+| Take Home Hourly Rate |55/hrs |
+| Multiplier            | 2.7    |
+| Billing Rate          | 148.5  |
+| Developers            | 5      |
+| Hours per Developer   | 180    |
+| Percent of the total value |80%    |
