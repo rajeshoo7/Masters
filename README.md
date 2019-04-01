@@ -40,9 +40,11 @@
 
 | Cost Estimate       |        |
 |-----------------------|--------|
-| Take Home Hourly Rate |55/hrs |
-| Multiplier            | 2.7    |
-| Billing Rate          | 148.5  |
+| Take Home Hourly Rate |40/hrs |
+| Multiplier            | 2.6    |
+| Billing Rate          | 104  |
 | Developers            | 5      |
 | Hours per Developer   | 180    |
 | Percent of the total value |80%    |
+
+Total Cost estimate : $93,600
