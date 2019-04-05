@@ -171,3 +171,4 @@ C:\Users\S531494\Documents\44663\Project\Masters\Masters\obj\Debug\netcoreapp2.2
 C:\Users\S531494\Documents\44663\Project\Masters\Masters\obj\Debug\netcoreapp2.2\Masters.dll
 C:\Users\S531494\Documents\44663\Project\Masters\Masters\obj\Debug\netcoreapp2.2\Masters.pdb
 C:\Users\S531494\Documents\44663\Project\Masters\Masters\obj\Debug\netcoreapp2.2\Masters.csproj.CopyComplete
+C:\Users\S531494\Documents\44663\Project\Masters\Masters\obj\Debug\netcoreapp2.2\Masters.csprojAssemblyReference.cache
