@@ -16,5 +16,6 @@ namespace Masters.Models
         public string TermLabel { get; set; }
 
         public Student Student { get; set; }
+        public bool done { get; set; }
     }
 }

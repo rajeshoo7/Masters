@@ -14,6 +14,7 @@ namespace Masters.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Snumber { get; set; }
+        public bool done { get; set; }
 
         //public ICollection<DegreePlan> DegreePlans { get; set; }
         //public ICollection<StudentTerm> StudentTerms { get; set; }

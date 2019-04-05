@@ -16,6 +16,7 @@ namespace Masters.Models
 
         public DegreePlan DegreePlan { get; set; }
         public Requirement Requirement { get; set; }
+        public bool done { get; set; }
 
 
     }

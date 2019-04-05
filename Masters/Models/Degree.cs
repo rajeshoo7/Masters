@@ -12,6 +12,6 @@ namespace Masters.Models
         public int DegreeId { get; set; }
         public string DegreeAbrrev { get; set; }
         public string DegreeName { get; set; }
-
+        public bool done { get; set; }
     }
 }

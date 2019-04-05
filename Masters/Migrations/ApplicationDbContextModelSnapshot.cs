@@ -15,7 +15,7 @@ namespace Masters.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.2.2-servicing-10034")
+                .HasAnnotation("ProductVersion", "2.2.1-servicing-10028")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -26,6 +26,8 @@ namespace Masters.Migrations
                     b.Property<string>("DegreeAbrrev");
 
                     b.Property<string>("DegreeName");
+
+                    b.Property<bool>("done");
 
                     b.HasKey("DegreeId");
 
@@ -46,6 +48,8 @@ namespace Masters.Migrations
 
                     b.Property<int?>("StudentId1");
 
+                    b.Property<bool>("done");
+
                     b.HasKey("DegreePlanId");
 
                     b.HasIndex("DegreeId");
@@ -65,6 +69,8 @@ namespace Masters.Migrations
 
                     b.Property<int>("TermId");
 
+                    b.Property<bool>("done");
+
                     b.HasKey("DegreePlanTermRequirementId");
 
                     b.HasIndex("DegreePlanId");
@@ -81,6 +87,8 @@ namespace Masters.Migrations
                     b.Property<int>("DegreeId");
 
                     b.Property<int>("RequirementId");
+
+                    b.Property<bool>("done");
 
                     b.HasKey("DegreeRequirementId");
 
@@ -99,6 +107,8 @@ namespace Masters.Migrations
 
                     b.Property<string>("RequirementName");
 
+                    b.Property<bool>("done");
+
                     b.HasKey("RequirementId");
 
                     b.ToTable("Requirements");
@@ -116,6 +126,8 @@ namespace Masters.Migrations
 
                     b.Property<string>("Snumber");
 
+                    b.Property<bool>("done");
+
                     b.HasKey("StudentId");
 
                     b.ToTable("Student");
@@ -132,6 +144,8 @@ namespace Masters.Migrations
                     b.Property<int>("TermId");
 
                     b.Property<string>("TermLabel");
+
+                    b.Property<bool>("done");
 
                     b.HasKey("StudentTermId");
 

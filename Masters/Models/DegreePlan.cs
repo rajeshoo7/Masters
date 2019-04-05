@@ -22,8 +22,9 @@ namespace Masters.Models
 
         public Degree Degree { get; set; }
         public Student Student { get; set; }
-       
-       
+        public bool done { get; set; }
+
+
 
 
     }

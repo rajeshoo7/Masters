@@ -12,6 +12,7 @@ namespace Masters.Models
         public int RequirementId { get; set; }
         public string RequirementAbbrev { get; set; }
         public string RequirementName { get; set; }
+        public bool done { get; set; }
 
 
     }
