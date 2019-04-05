@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Masters.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20190405200647_[Degree]")]
+    [Migration("20190405201505_[Degree]")]
     partial class Degree
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

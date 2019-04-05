@@ -47,6 +47,9 @@
                 @Html.DisplayFor(modelItem => item.Requirement.RequirementId)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.done)
+            </td>
+            <td>
                 <a asp-action="Edit" asp-route-id="@item.DegreePlanTermRequirementId">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.DegreePlanTermRequirementId">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.DegreePlanTermRequirementId">Delete</a>

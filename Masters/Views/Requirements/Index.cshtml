@@ -34,19 +34,22 @@
     <tbody>
         @foreach (var item in Model)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.RequirementAbbrev)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.RequirementName)
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.RequirementId">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.RequirementId">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.RequirementId">Delete</a>
-                </td>
-            </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.RequirementAbbrev)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RequirementName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.done)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.RequirementId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.RequirementId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.RequirementId">Delete</a>
+            </td>
+        </tr>
         }
     </tbody>
 </table>
