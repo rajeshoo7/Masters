@@ -31,6 +31,9 @@
             <th>
                 <a asp-action="Index" asp-route-sortOrder="@ViewData["RequirementSortParm"]">@Html.DisplayNameFor(model => model.Requirement)</a>
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.done)
+            </th>
             <th></th>
         </tr>
     </thead>
