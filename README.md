@@ -26,17 +26,18 @@
 - You can also run the app from command prompt using the command "dotnet run"
 - Deployed link: https://masters1.azurewebsites.net/
 
+# Issue tracking system:
+
+- https://github.com/SrimaiReddy/Masters/issues
+- https://github.com/SrimaiReddy/Masters/commits/master
+
 # How to deploy
 - Open the project folder
 - Right click -> select Tortoise git -> settings
 - On left panel, select remote, enter the name, url, push url and then click on add new
 - Click on ok
-
-
-# Issue tracking system:
-
-- https://github.com/SrimaiReddy/Masters/issues
-- https://github.com/SrimaiReddy/Masters/commits/master
+- While pushing to git, select all instead of origin under destination to deploy.
+- Push the repo.
 
 
 # Screen shots of App running locally:
