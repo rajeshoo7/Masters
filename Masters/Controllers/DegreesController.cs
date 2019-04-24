@@ -62,6 +62,7 @@ namespace Masters.Controllers
             }
 
             var degree = await _context.Degrees
+                 .Include(d => d.DegreeRequirements)
                 .FirstOrDefaultAsync(m => m.DegreeId == id);
             if (degree == null)
             {

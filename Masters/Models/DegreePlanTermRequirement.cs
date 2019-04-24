@@ -10,8 +10,13 @@ namespace Masters.Models
     {
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int DegreePlanTermRequirementId { get; set; }
+
+
+        [ForeignKey("DegreePlanId")]
         public int DegreePlanId { get; set; }
         public int TermId { get; set; }
+
+        [ForeignKey("RequirementId")]
         public int RequirementId { get; set; }
 
         public DegreePlan DegreePlan { get; set; }

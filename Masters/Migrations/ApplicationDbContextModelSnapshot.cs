@@ -23,9 +23,13 @@ namespace Masters.Migrations
                 {
                     b.Property<int>("DegreeId");
 
-                    b.Property<string>("DegreeAbrrev");
+                    b.Property<string>("DegreeAbrrev")
+                        .IsRequired()
+                        .HasMaxLength(50);
 
-                    b.Property<string>("DegreeName");
+                    b.Property<string>("DegreeName")
+                        .IsRequired()
+                        .HasMaxLength(40);
 
                     b.Property<bool>("done");
 
@@ -40,9 +44,12 @@ namespace Masters.Migrations
 
                     b.Property<int>("DegreeId");
 
-                    b.Property<string>("DegreePlanAbbrev");
+                    b.Property<string>("DegreePlanAbbrev")
+                        .IsRequired();
 
-                    b.Property<string>("DegreePlanName");
+                    b.Property<string>("DegreePlanName")
+                        .IsRequired()
+                        .HasMaxLength(40);
 
                     b.Property<string>("StudentId");
 
@@ -88,6 +95,8 @@ namespace Masters.Migrations
 
                     b.Property<int>("RequirementId");
 
+                    b.Property<string>("RequirementName");
+
                     b.Property<bool>("done");
 
                     b.HasKey("DegreeRequirementId");
@@ -103,9 +112,12 @@ namespace Masters.Migrations
                 {
                     b.Property<int>("RequirementId");
 
-                    b.Property<string>("RequirementAbbrev");
+                    b.Property<string>("RequirementAbbrev")
+                        .IsRequired();
 
-                    b.Property<string>("RequirementName");
+                    b.Property<string>("RequirementName")
+                        .IsRequired()
+                        .HasMaxLength(40);
 
                     b.Property<bool>("done");
 
@@ -118,13 +130,19 @@ namespace Masters.Migrations
                 {
                     b.Property<int>("StudentId");
 
-                    b.Property<string>("FirstName");
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasMaxLength(40);
 
-                    b.Property<string>("LastName");
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasMaxLength(40);
 
                     b.Property<int>("NineOneNineNumber");
 
-                    b.Property<string>("Snumber");
+                    b.Property<string>("Snumber")
+                        .IsRequired()
+                        .HasMaxLength(10);
 
                     b.Property<bool>("done");
 
@@ -139,11 +157,15 @@ namespace Masters.Migrations
 
                     b.Property<int>("StudentId");
 
-                    b.Property<string>("TermAbbrev");
+                    b.Property<string>("TermAbbrev")
+                        .IsRequired()
+                        .HasMaxLength(10);
 
                     b.Property<int>("TermId");
 
-                    b.Property<string>("TermLabel");
+                    b.Property<string>("TermLabel")
+                        .IsRequired()
+                        .HasMaxLength(40);
 
                     b.Property<bool>("done");
 
@@ -327,7 +349,7 @@ namespace Masters.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("Masters.Models.Student", "Student")
-                        .WithMany()
+                        .WithMany("DegreePlans")
                         .HasForeignKey("StudentId1");
                 });
 
@@ -347,7 +369,7 @@ namespace Masters.Migrations
             modelBuilder.Entity("Masters.Models.DegreeRequirement", b =>
                 {
                     b.HasOne("Masters.Models.Degree", "Degree")
-                        .WithMany()
+                        .WithMany("DegreeRequirements")
                         .HasForeignKey("DegreeId")
                         .OnDelete(DeleteBehavior.Cascade);
 
@@ -360,7 +382,7 @@ namespace Masters.Migrations
             modelBuilder.Entity("Masters.Models.StudentTerm", b =>
                 {
                     b.HasOne("Masters.Models.Student", "Student")
-                        .WithMany()
+                        .WithMany("StudentTerms")
                         .HasForeignKey("StudentId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
