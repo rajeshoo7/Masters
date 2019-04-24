@@ -26,6 +26,12 @@
 - You can also run the app from command prompt using the command "dotnet run"
 - Deployed link: https://masters1.azurewebsites.net/
 
+# How to deploy
+- Open the project folder
+- Right click -> select Tortoise git -> settings
+- On left panel, select remote, enter the name, url, push url and then click on add new
+- Click on ok
+
 
 # Issue tracking system:
 
