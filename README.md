@@ -24,12 +24,14 @@
 - Open the Masters.sln file with Visual Studio
 - Click on IIS run button on menu bar at top to run the app locally
 - You can also run the app from command prompt using the command "dotnet run"
-
+- Deployed link: https://masters1.azurewebsites.net/
 
 
 # Issue tracking system:
 
-  https://github.com/SrimaiReddy/Masters/issues
+- https://github.com/SrimaiReddy/Masters/issues
+- https://github.com/SrimaiReddy/Masters/commits/master
+
 
 # Screen shots of App running locally:
 
