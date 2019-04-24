@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Masters.Data;
 using Masters.Models;
 
-namespace Masters.Controllers
+namespace MVC.Controllers
 {
     public class StudentsController : Controller
     {
@@ -22,12 +22,10 @@ namespace Masters.Controllers
         // GET: Students
         public async Task<IActionResult> Index(string sortOrder, string searchString)
         {
-            ViewData["FirstNameSortParm"] = String.IsNullOrEmpty(sortOrder) ? "firstName_desc" : "firstName";
-            ViewData["NineOneNineNumberSortParm"] = String.IsNullOrEmpty(sortOrder) ? "nineoneninenumber_desc" : "nineoneninenumber";
-
+            ViewData["FirstNameSortParm"] = String.IsNullOrEmpty(sortOrder) ? "firstName_desc" : "";
             ViewData["LastNameSortParm"] = String.IsNullOrEmpty(sortOrder) ? "lastName_desc" : "LastName";
             ViewData["SNumberSortParm"] = sortOrder == "Snumber" ? "snumber_desc" : "SNumber";
-            ViewData["StudentIdSortParm"] = sortOrder == "StudentId" ? "studentId_desc" : "studentId";
+            ViewData["SIDSortParm"] = sortOrder == "SId" ? "sid_desc" : "SID";
             ViewData["currentFilter"] = searchString;
 
             var student = from s in _context.Students
@@ -55,10 +53,10 @@ namespace Masters.Controllers
                 case "snumber_desc":
                     student = student.OrderByDescending(s => s.Snumber);
                     break;
-                case "studentId":
+                case "SID":
                     student = student.OrderBy(s => s.StudentId);
                     break;
-                case "studentId_desc":
+                case "sid_desc":
                     student = student.OrderByDescending(s => s.StudentId);
                     break;
                 default:
@@ -78,7 +76,10 @@ namespace Masters.Controllers
             }
 
             var student = await _context.Students
-                .FirstOrDefaultAsync(m => m.StudentId == id);
+            .Include(d => d.DegreePlans)
+            .SingleOrDefaultAsync(m => m.StudentId == id);
+
+
             if (student == null)
             {
                 return NotFound();
@@ -98,7 +99,7 @@ namespace Masters.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("StudentId,NineOneNineNumber,FirstName,LastName,Snumber")] Student student)
+        public async Task<IActionResult> Create([Bind("StudentId,First,Last,Snumber,SId")] Student student)
         {
             if (ModelState.IsValid)
             {
@@ -130,7 +131,7 @@ namespace Masters.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("StudentId,NineOneNineNumber,FirstName,LastName,Snumber")] Student student)
+        public async Task<IActionResult> Edit(int id, [Bind("StudentId,First,Last,Snumber,SId")] Student student)
         {
             if (id != student.StudentId)
             {
